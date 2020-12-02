@@ -1,11 +1,13 @@
 import "./App.css";
-import ImageList from "./component/ImageList";
+import ImageContainer from "./component/ImageContainer";
 
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'>Image Gallery</header>
-      <ImageList />
+      <header className='App-header'>
+        <h3>Image Gallery</h3>
+      </header>
+      <ImageContainer />
     </div>
   );
 }
