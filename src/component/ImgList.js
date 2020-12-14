@@ -1,20 +1,14 @@
 import React from "react";
+import ImgItem from "./ImgItem";
 
-const ImgList = function () {
+const ImgList = function ({ imgData }) {
+  const List = imgData.map(function (img, id) {
+    // console.log(id);
+    return <ImgItem key={id} image={img} />;
+  });
   return (
     <ul>
-      <li>
-        Image 1 <button>more</button>
-      </li>
-      <li>
-        Image 2 <button>more</button>
-      </li>
-      <li>
-        Image 3 <button>more</button>
-      </li>
-      <li>
-        Image 4 <button>more</button>
-      </li>
+      <li>{List}</li>
     </ul>
   );
 };

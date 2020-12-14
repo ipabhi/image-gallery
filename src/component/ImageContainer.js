@@ -1,10 +1,11 @@
 import React from "react";
 import ImgList from "./ImgList";
 
-const ImageContainer = function () {
+
+const ImageContainer = function ({appData}) {
   return (
     <section>
-      <ImgList />
+      <ImgList imgData={appData} />
     </section>
   );
 };
