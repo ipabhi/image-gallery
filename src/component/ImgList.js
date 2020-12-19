@@ -6,11 +6,7 @@ const ImgList = function ({ imgData }) {
     // console.log(id);
     return <ImgItem key={id} image={img} />;
   });
-  return (
-    <ul>
-      <li>{List}</li>
-    </ul>
-  );
+  return <ul className='imgList'>{List}</ul>;
 };
 
 export default ImgList;

@@ -1,6 +1,11 @@
 import React from "react";
 
 const ImgItem = function ({ image: { download_url, author, id } }) {
+  // btn function
+  const downloadImage = function () {
+    window.open(download_url);
+  };
+
   // helper function to add 200px width on every image
   const newWidthUrl = function (url, id) {
     const getArray = url.split(`id/${id}`);
@@ -11,10 +16,11 @@ const ImgItem = function ({ image: { download_url, author, id } }) {
   };
 
   return (
-    <div>
-      <img src={newWidthUrl(download_url, id)} alt={author} />
-      <button>find more</button>
-    </div>
+    <li>
+      <img src={newWidthUrl(download_url, id)} alt={author} title={author} />
+      <p>Image by: {author}</p>
+      <button onClick={downloadImage}>Download</button>
+    </li>
   );
 };
 export default ImgItem;
